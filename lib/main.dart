@@ -13,43 +13,40 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Shopping App",
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          titleTextStyle: TextStyle(
-            fontSize: 20,
-            color: Colors.black,
+        debugShowCheckedModeBanner: false,
+        title: "Shopping App",
+        theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+            titleTextStyle: TextStyle(
+              fontSize: 20,
+              color: Colors.black,
+            ),
+          ),
+          textTheme: const TextTheme(
+            titleMedium: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+            bodySmall: TextStyle(fontWeight: FontWeight.bold),
+            titleLarge: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 35,
+            ),
+          ),
+          useMaterial3: true,
+          // scaffoldBackgroundColor: Colors.white,
+          fontFamily: 'Lato',
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromRGBO(254, 206, 1, 1),
+            primary: const Color.fromRGBO(254, 206, 1, 1),
+          ),
+          inputDecorationTheme: const InputDecorationTheme(
+            hintStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+            prefixIconColor: Color.fromRGBO(119, 119, 119, 1),
           ),
         ),
-        textTheme: const TextTheme(
-          titleMedium: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
-          bodySmall: TextStyle(fontWeight: FontWeight.bold),
-          titleLarge: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 35,
-          ),
-        ),
-        useMaterial3: true,
-        // scaffoldBackgroundColor: Colors.white,
-        fontFamily: 'Lato',
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromRGBO(254, 206, 1, 1),
-          primary: const Color.fromRGBO(254, 206, 1, 1),
-        ),
-        inputDecorationTheme: const InputDecorationTheme(
-          hintStyle: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),
-          prefixIconColor: Color.fromRGBO(119, 119, 119, 1),
-        ),
-      ),
-      home: ProductDetailsPage(
-        product: products[0],
-      ),
-    );
+        home: const HomePage());
   }
 }
